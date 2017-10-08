@@ -12,6 +12,15 @@
 
 	<artifactId>preprocessing-impl</artifactId>
 
+
+	<dependencies>
+		<dependency>
+			<groupId>it.galby.poc</groupId>
+			<artifactId>preprocessing-api</artifactId>
+			<version>1.0</version>
+		</dependency>
+	</dependencies>
+
 	<build>
 		<plugins>
 			<plugin>
