@@ -44,10 +44,6 @@ public class BuilderPreProcessor extends AbstractProcessor {
 
 			}
 
-			GenBuilder genBuilder = elem.getAnnotation(GenBuilder.class);
-			// String message = "annotation found in " + elem.getSimpleName()
-			// + " with complexity " + complexity.value();
-			processingEnv.getMessager().printMessage(Kind.NOTE, "aaaaaa");
 		}
 
 		return true;
