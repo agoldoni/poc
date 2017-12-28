@@ -2,6 +2,7 @@ package it.galby.poc.preprocessing.impl;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.LocalDateTime;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
@@ -67,15 +68,25 @@ public class BuilderPreProcessor extends AbstractProcessor {
 				out.println();
 			}
 
-			out.print("public class ");
-			out.print(ci.getBuilderSimpleClassName());
-			out.println(" {");
+			out.println("// " + LocalDateTime.now());
+
+			out.printf("public class %s {\n\n", ci.getBuilderSimpleClassName());
+
+			for (Element element : elem.getEnclosedElements()) {
+				if (element.getKind() == ElementKind.METHOD) {
+
+				}
+			}
+
 			out.println();
-			out.println(" }");
+			out.println("}");
 
 		}
 
 	}
+
+	// ***********************************************************************
+	// ***********************************************************************
 
 	// ***********************************************************************
 	// ***********************************************************************
